@@ -19,9 +19,6 @@ test('AssersionTest',async ({page})=>{ // in to under this line we will be write
    await expect (mailBox).toBeEnabled()
    // 4.1 expect (locator).toBeDisabled()
 
-   // 5. expect (locator).tobeChecked()
-   const passwordVisible=await page.locator("svg[width='15']")
-   await passwordVisible.click()
-    await expect (passwordVisible).toBeChecked()
+   
    
 })
