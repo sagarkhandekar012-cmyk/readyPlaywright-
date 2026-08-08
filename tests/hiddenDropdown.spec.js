@@ -30,4 +30,5 @@ if (jobTitle.includes('QA Lead'))  /* here we are checking the option is present
     break;
 }
 }
+await page.waitForTimeout(5000); /* here we are waiting for the option */
 });
