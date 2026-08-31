@@ -33,6 +33,9 @@ await expect(page.locator("//span[@class='rt-Text rt-r-size-2 rt-r-weight-regula
 const passwordInput = page.getByRole('textbox', { name: 'Password' });
 await passwordInput.fill('Test@123');
 
+const loginButton = page.locator("//button[normalize-space()='Login']");
+    await expect(loginButton).toHaveAttribute('type', 'submit');
+    await loginButton.click();
 
 
 const afterLoginFrame =page.frames();
