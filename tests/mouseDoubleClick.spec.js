@@ -1,25 +1,14 @@
-const {test, expect} = require('@playwright/test'); 
+const {test, expect} = require('@playwright/test');
+
 test('Mouse Double Click', async ({ page }) => {
 
 await page.goto('https://testautomationpractice.blogspot.com/');
 
-const uchalIthun = await page.locator("#draggable");
-const itheTak = await page.locator("#droppable");
+const copyTextButton = await page.locator("//button[normalize-space()='Copy Text']");
+copyTextButton.dblclick();
 
-//approch 1
-/*
-await uchalIthun.hover();
-await page.mouse.down();
+const text = await page.locator("//input[@id='field2']");
+await expect(text).toHaveValue("Hello World!");
 
-await itheTak.hover();
-await page.mouse.up();
-*/
-
-//approch 2
-await page.waitForTimeout(1000);
-
-await uchalIthun.dragTo(itheTak);
-
-
-await page.waitForTimeout(10000); // Wait for 10 seconds to observe the page load
+await page.waitForTimeout(5000); // Wait for  seconds to observe the page load
 });
