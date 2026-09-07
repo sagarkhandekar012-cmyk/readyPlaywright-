@@ -20,15 +20,15 @@ test('newFrame', async ({page}) => {
         console.log('Logo is not visible');
     }
 
-    const isEmailInputEnabled = page.locator("//input[@placeholder='Enter Email Id']")
+    const isEmailInputEnabled = page.locator("//input[@placeholder='Enter Email Id']");
     await expect(isEmailInputEnabled).toBeEnabled();
     await isEmailInputEnabled.fill('shopby@yopmail.com');
     await expect(isEmailInputEnabled).toHaveValue("shopby@yopmail.com");
 
-const continueText  = page.locator("(//span[@class='rt-Text rt-r-size-3 rt-r-weight-regular rt-r-mb-4'])[1]")
+const continueText  = page.locator("(//span[@class='rt-Text rt-r-size-3 rt-r-weight-regular rt-r-mb-4'])[1]");
 await expect(continueText).toHaveText("Please Login to continue ");
 
-await expect(page.locator("//span[@class='rt-Text rt-r-size-2 rt-r-weight-regular rt-r-mt-2']")).toContainText("Don't")
+await expect(page.locator("//span[@class='rt-Text rt-r-size-2 rt-r-weight-regular rt-r-mt-2']")).toContainText("Don't");
 
 const passwordInput = page.getByRole('textbox', { name: 'Password' });
 await passwordInput.fill('Test@123');
@@ -41,11 +41,11 @@ const loginButton = page.locator("//button[normalize-space()='Login']");
 const afterLoginFrame =page.frames();
 console.log('after login frame', afterLoginFrame.length);
 
-    const textVrify = page.locator("(//span[normalize-space()='Ecommerce'])[1]")
+    const textVrify = page.locator("(//span[normalize-space()='Ecommerce'])[1]");
     await expect(textVrify).toBeVisible();
     await expect(textVrify).toHaveText("Ecommerce");
 
-const textVrify1 = page.locator("(//span[@class='rt-Text rt-r-size-2 rt-r-weight-medium'][normalize-space()='Dashboard'])[1]")
+const textVrify1 = page.locator("(//span[@class='rt-Text rt-r-size-2 rt-r-weight-medium'][normalize-space()='Dashboard'])[1]");
 await expect(textVrify1).toBeVisible();
 await expect(textVrify1).toHaveText("Dashboard");
 
@@ -56,14 +56,14 @@ if (filedIsVisible) {
 } else {
     console.log('Field is not visible');
 }
-const valueVerify = page.locator("body > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > span:nth-child(1)")  
+const valueVerify = page.locator("body > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > span:nth-child(1)"); 
 await expect(valueVerify).not.toHaveText("0");
 if (await valueVerify.textContent() === "0") {
     console.log('Value is zero');
 } else {    
 console.log('Value is not zero');
 }
-const textVerify2 = page.locator("(//span[normalize-space()='Total Number Of Booked Orders'])[1]")
+const textVerify2 = page.locator("(//span[normalize-space()='Total Number Of Booked Orders'])[1]");
 await expect(textVerify2).toContainText("Total Number Of Booked Orders");
 if (await textVerify2.textContent() === "Total Number Of Booked Orders") {
     console.log('there is Total Number Of Booked Orders text is correct');
@@ -73,7 +73,7 @@ if (await textVerify2.textContent() === "Total Number Of Booked Orders") {
     }
 
     await page.locator("(//button[normalize-space()='Weekly'])[1]").click();
-    const txtWeek = page.locator("(//span[normalize-space()='This Week'])[1]")
+    const txtWeek = page.locator("(//span[normalize-space()='This Week'])[1]");
     await expect(txtWeek).toBeVisible();
     await expect(txtWeek).toHaveText("This Week");
     if (await txtWeek.textContent() === "This Week") {
@@ -100,7 +100,7 @@ await expect(theBrand).toHaveText("Brand Profiles");
 const buttonVisible = page.locator(".lucide.lucide-plus");
 await expect(buttonVisible).toBeEnabled();
 await expect(buttonVisible).toBeVisible();
-const buttonAttribute = page.locator("(//button[normalize-space()='Add Brand Profile'])[1]")
+const buttonAttribute = page.locator("(//button[normalize-space()='Add Brand Profile'])[1]");
 await expect(buttonAttribute).toHaveAttribute('style','cursor: pointer;');
 await buttonAttribute.click();
 
@@ -166,7 +166,8 @@ if (await subscription.isVisible()) {
     // MOVE THIS INSIDE THE IF STATEMENT
     // Only check the price if we actually clicked the subscription!
     await expect(subscriptionPrice).toHaveValue("60.00");
-    if (await subscriptionPrice.inputValue() === "60.00") {
+    if (await subscriptionPrice.inputValue() === "60.00")
+         {
         console.log('Subscription Price is correct');
     } else {
         console.log('Subscription Price is incorrect');
@@ -181,7 +182,8 @@ if (await durationTime.isVisible()) {
     console.log("there is Duration Time");
 }
     await expect(durationTime).toHaveValue("2 weekly");
-    if (await durationTime.inputValue() === "2 weekly") {
+    if (await durationTime.inputValue() === "2 weekly") 
+        {
         console.log('Duration Time is correct');
     } else {
         console.log('Duration Time is incorrect');
@@ -217,7 +219,8 @@ if (await submitButton.isEnabled()) {
 const cancelButton = page.locator(".rt-reset.rt-BaseButton.rt-r-size-2.rt-variant-soft.rt-Button")
 await cancelButton.isEnabled();
 await cancelButton.isVisible();
-if (await cancelButton.isEnabled()) {
+if (await cancelButton.isEnabled())
+     {
     console.log('Cancel button is enabled');
     await cancelButton.click();
 }
