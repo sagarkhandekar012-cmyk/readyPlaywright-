@@ -45,8 +45,8 @@ await expect(text).toBeVisible();
 
 await page.waitForTimeout(5000);
 
-await page.screenshot({ path: 'tests/skshots/screenshot.png', fullPage: true });
-//await page.screenshot({path:'test/screenshot/'+Date.now()+'dashboardfull.png',fullPage:true});
+//await page.screenshot({ path: 'tests/skshots/screenshot.png', fullPage: true });
+await page.screenshot({path:'tests/skshots/'+Date.now()+'dashboardfull.png',fullPage:true});
 
 
 });
