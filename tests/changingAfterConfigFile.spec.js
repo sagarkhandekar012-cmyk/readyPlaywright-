@@ -16,6 +16,6 @@ await page.locator('//input[@aria-label="Character 3 of 4"]').fill('3');
 await page.locator('//input[@aria-label="Character 4 of 4"]').fill('4'); 
 await page.locator("//button[normalize-space()='Verify']").click();
 
-})
+});
 
 //changingAfterConfigFile
