@@ -30,7 +30,7 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'retain-on-failure',
+    trace: 'off',
 
 //'on-first-retry' - Record a trace only when retrying a test for the first time.
 //'on-all-retries' - Record traces for all test retries.
@@ -38,7 +38,7 @@ export default defineConfig({
 //'on' - Record a trace for each test. (not recommended as it's performance heavy)
 //'retain-on-failure' - Record a trace for each test, but remove it from successful test runs.
 
-    screenshot:"only-on-failure" ,// if any time want to take the screenshot
+    screenshot:"off" ,// if any time want to take the screenshot
                       // automaticaly that time remove the comment 
                       // and we able to
                       // take the screen shot automaticaly 
@@ -47,7 +47,7 @@ export default defineConfig({
 //'only-on-failure'
 
 
-    video:"retain-on-failure"//if any time want to take the video
+    video:"off"//if any time want to take the video
                       // automaticaly that time remove the comment 
                       // and we able to
                       // take the video automaticaly 
