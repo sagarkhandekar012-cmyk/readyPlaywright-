@@ -36,3 +36,21 @@ test.fail()//this we can use for the negative testing
     console.log("hello 5")
     expect(1).toBe(2);
 })
+
+test('test6', async({page, browserName})=>{
+    console.log("hello 6")
+
+if(browserName==='firefox'){
+test.fail()//this we can use for the negative testing
+}
+console.log("hello 6")
+    
+})
+
+test('test7', async({page})=>{
+//test.slow(); // using this it will be incriesces the 3x 
+test.setTimeout(10000)//using this we set the time for this manualy
+    console.log("hello 7")
+    await page.goto('https://testing.superadmin-amoz.betadelivery.com/login', { waitUntil: 'domcontentloaded' });
+
+})
