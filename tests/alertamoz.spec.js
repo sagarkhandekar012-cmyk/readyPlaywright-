@@ -1,7 +1,7 @@
 // in that code there i am checkin the alert message but the messages are not visible we have to manage that 
 
 const {test, expect} = require('@playwright/test');
-test.fail();
+test.fixme();
 
 test('login page message box',async({page})=> {
 
@@ -13,20 +13,21 @@ test('login page message box',async({page})=> {
     await expect(isEmailInputEnabled).toHaveValue("cleanerservices@yopmail.com");
 
 
-      const loginButton = await page.locator("//button[normalize-space()='Login']");
-      await expect(loginPageMessage).toBeVisible();
-   /* await expect(loginButton).toHaveAttribute('type', 'submit');
+    const loginButton = await page.locator("//button[normalize-space()='Login']");
+    await expect(loginPageMessage).toBeVisible();
+    await expect(loginButton).toHaveAttribute('type', 'submit');
     await loginButton.click();
 
-const loginPagemessage = await page.getByText('Please fix the highlighted field')
-if(loginPagemessage.isVisible()){
+    const loginPagemessage = await page.getByText('Please fix the highlighted field')
+await expect(loginPageMessage).toBeVisible();
+  /*  if(await loginPagemessage.isVisible()){
     console.log('there is also this message is visible ')
 }
 else{
     console.log("there is the message is not visible")
 }
 
-if(loginPagemessage.textContent() === "Please fix the highlighted field"){
+if(await loginPagemessage.textContent() === "Please fix the highlighted field"){
     console.log("there is the message is showing")
 }
 else{
@@ -63,7 +64,7 @@ expect(dialog.message()).toContainText('hello')
 //const toastMessage = page.locator("//section[@aria-label='Notifications Alt+T']");
 // Replace lines 27-31 with this clean, robust approach:
 const toastMessage = page.getByText('Login Successfully');
-if(toastMessage.isVisible())
+if(await toastMessage.isVisible())
 {
     console.log("message is visible ")
 }
