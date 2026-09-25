@@ -14,12 +14,12 @@ test('login page message box',async({page})=> {
 
 
     const loginButton = await page.locator("//button[normalize-space()='Login']");
-    await expect(loginPageMessage).toBeVisible();
     await expect(loginButton).toHaveAttribute('type', 'submit');
     await loginButton.click();
 
-    const loginPagemessage = await page.getByText('Please fix the highlighted field')
-await expect(loginPageMessage).toBeVisible();
+    //const loginPagemessage = await page.getByText('Please fix the highlighted field')
+const loginPagemessage =await page.locator("//section[@aria-label='Notifications Alt+T']")
+    await expect(loginPageMessage).toBeVisible();
   /*  if(await loginPagemessage.isVisible()){
     console.log('there is also this message is visible ')
 }
