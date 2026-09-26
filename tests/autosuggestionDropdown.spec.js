@@ -35,6 +35,9 @@ await fileChooser.setFiles(["C:\\Users\\wdila\\Pictures\\images (3).jpg",
                 "C:\\Users\\wdila\\Pictures\\images (4).jpg"
 ]);
 
+await page.locator("//input[@placeholder='Search for location or enter coordinates']").fill("kandivali")
+await page.locator("//div[@class='pac-container pac-logo']//div[4]").click();
+
 /*
 const fileChooserPromise = page.waitForEvent('filechooser');
 //await page.locator(':text-is("Click to upload (PNG, JPG, PDF)")')
