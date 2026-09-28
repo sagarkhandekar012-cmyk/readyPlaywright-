@@ -6,7 +6,8 @@ test('pom' ,async({page})=> {
     const login = new loginpage(page);
     await login.gotoLoginPage();
     await login.login('kalakendra@yopmail.com','Test@123');
-    await page.waitForTimeout(5000)
+    await page.waitForTimeout(5000);
+    
 
 })
 
