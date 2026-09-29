@@ -12,11 +12,17 @@ async navigetPage(){
     await this.page.locator(this.manageTurf).click();
 }
 
-async turfs(turfName){
+async turfs(turfName)
+    {
 const listOfData = await this.page.$$(this.listOfData);
-for(const turf of listOfData){
-
+for(const turf of listOfData)
+    {
+if(turfName === await turf.textContent())
+{
+    await this.page.locator(this.deleteTurf).click();
+    break;
 }
-}
+    }
+    }
 
 }
