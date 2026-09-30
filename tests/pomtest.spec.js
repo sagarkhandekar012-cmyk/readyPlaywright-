@@ -1,6 +1,7 @@
 import { expect,test } from "@playwright/test";
 import { loginpage } from "./pages/login";
 import { homePage } from "./pages/home";
+import { last } from "./pages/last";
 
 test('pom' ,async({page})=> {
 
@@ -14,7 +15,14 @@ test('pom' ,async({page})=> {
     const turrfs = new homePage(page);
     
     await turrfs.turfs('Rk turf');
+//await page.waitForTimeout(5000);
+
+//last
+const view = new last(page);
 await page.waitForTimeout(5000);
+const status=await view.newPage('Turf Information');
+expect(await status).toBe(true);
+
 })
 
 
