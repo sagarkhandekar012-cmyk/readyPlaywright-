@@ -1,0 +1,10 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="11.504475000000001">
+<testsuite name="reporters.spec.js" timestamp="2026-10-04T18:12:41.211Z" hostname="chromium" tests="3" failures="0" skipped="0" time="10.386" errors="0">
+<testcase name="superadmin login" classname="reporters.spec.js" time="3.539">
+</testcase>
+<testcase name="companyadmin login" classname="reporters.spec.js" time="3.032">
+</testcase>
+<testcase name="orangehrm login" classname="reporters.spec.js" time="3.815">
+</testcase>
+</testsuite>
+</testsuites>
