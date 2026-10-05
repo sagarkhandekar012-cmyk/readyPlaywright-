@@ -42,6 +42,10 @@
     "quiet": false,
     "reporter": [
       [
+        "html",
+        null
+      ],
+      [
         "list",
         null
       ],
@@ -49,6 +53,18 @@
         "json",
         {
           "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results.xml"
+        }
+      ],
+      [
+        "C:\\Users\\wdila\\Documents\\readyPlaywright-\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        {
+          "outputFolder": "allure-results"
         }
       ]
     ],
@@ -60,7 +76,7 @@
     "tags": [],
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
-    "version": "1.62.1",
+    "version": "1.63.0",
     "workers": 2,
     "webServer": null
   },
@@ -87,12 +103,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6588,
+                  "duration": 11005,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-04T18:03:03.876Z",
+                  "startTime": "2026-10-05T18:51:00.355Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -121,12 +137,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5098,
+                  "duration": 4734,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-04T18:03:10.875Z",
+                  "startTime": "2026-10-05T18:51:18.074Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -155,12 +171,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3078,
+                  "duration": 6639,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-04T18:03:15.986Z",
+                  "startTime": "2026-10-05T18:51:22.830Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -178,8 +194,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-04T18:03:03.398Z",
-    "duration": 15750.799,
+    "startTime": "2026-10-05T18:50:59.529Z",
+    "duration": 30070.009000000002,
     "expected": 3,
     "skipped": 0,
     "unexpected": 0,

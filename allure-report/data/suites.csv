@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","5114","orangehrm login","chromium","2026-10-06","passed","2026-10-06","","reporters.spec.js","",""
+"","9764","superadmin login","chromium","2026-10-06","passed","2026-10-06","","reporters.spec.js","",""
+"","6722","companyadmin login","chromium","2026-10-06","passed","2026-10-06","","reporters.spec.js","",""
