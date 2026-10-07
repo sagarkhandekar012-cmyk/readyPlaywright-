@@ -1,10 +1,36 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="30.070009000000002">
-<testsuite name="reporters.spec.js" timestamp="2026-10-05T18:50:59.612Z" hostname="chromium" tests="3" failures="0" skipped="0" time="22.378" errors="0">
-<testcase name="superadmin login" classname="reporters.spec.js" time="11.005">
-</testcase>
-<testcase name="companyadmin login" classname="reporters.spec.js" time="4.734">
-</testcase>
-<testcase name="orangehrm login" classname="reporters.spec.js" time="6.639">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="1" time="46.929654">
+<testsuite name="pomtest.spec.js" timestamp="2026-10-06T18:53:54.163Z" hostname="chromium" tests="1" failures="0" skipped="0" time="30.106" errors="1">
+<testcase name="pom" classname="pomtest.spec.js" time="30.106">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\pomtest-pom-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › pomtest.spec.js:6:5 › pom ───────────────────────────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "https://companyadmin-amoz.betadelivery.com/", waiting until "load"
+
+
+       at pages\login.js:13
+
+      11 |
+      12 | async gotoLoginPage(){
+    > 13 |     await this.page.goto("https://companyadmin-amoz.betadelivery.com/");
+         |                     ^
+      14 | }
+      15 |
+      16 | async login(email,password){
+        at loginpage.gotoLoginPage (C:\Users\wdila\Documents\readyPlaywright-\tests\pages\login.js:13:21)
+        at C:\Users\wdila\Documents\readyPlaywright-\tests\pomtest.spec.js:10:17
+
+    Error Context: ..\test-results\pomtest-pom-chromium\error-context.md
+]]>
+</error>
 </testcase>
 </testsuite>
 </testsuites>

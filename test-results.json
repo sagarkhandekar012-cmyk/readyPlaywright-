@@ -4,7 +4,10 @@
       "C:\\Program Files\\nodejs\\node.exe",
       "C:\\Users\\wdila\\Documents\\readyPlaywright-\\node_modules\\@playwright\\test\\cli.js",
       "test",
-      "tests/reporters.spec.js"
+      "tests/pomtest.spec.js",
+      "--project",
+      "chromium",
+      "--headed"
     ],
     "configFile": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\playwright.config.js",
     "rootDir": "C:/Users/wdila/Documents/readyPlaywright-/tests",
@@ -82,14 +85,14 @@
   },
   "suites": [
     {
-      "title": "reporters.spec.js",
-      "file": "reporters.spec.js",
+      "title": "pomtest.spec.js",
+      "file": "pomtest.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "superadmin login",
-          "ok": true,
+          "title": "pom",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -102,103 +105,57 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 11005,
-                  "errors": [],
+                  "status": "timedOut",
+                  "duration": 30106,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\pages\\login.js",
+                        "column": 21,
+                        "line": 13
+                      },
+                      "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://companyadmin-amoz.betadelivery.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpages\\login.js:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m \u001b[36masync\u001b[39m gotoLoginPage(){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://companyadmin-amoz.betadelivery.com/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m }\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m \u001b[36masync\u001b[39m login(email\u001b[33m,\u001b[39mpassword){\u001b[0m\n\u001b[2m    at loginpage.gotoLoginPage (C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\pages\\login.js:13:21)\u001b[22m\n\u001b[2m    at C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\pomtest.spec.js:10:17\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-05T18:51:00.355Z",
+                  "startTime": "2026-10-06T18:53:54.757Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\test-results\\pomtest-pom-chromium\\error-context.md"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "2a462c98d9f9b1a1f951-29a92de125bd003ab8ac",
-          "file": "reporters.spec.js",
-          "line": 3,
-          "column": 1
-        },
-        {
-          "title": "companyadmin login",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 4734,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-05T18:51:18.074Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "2a462c98d9f9b1a1f951-a8420922d82dc35c3849",
-          "file": "reporters.spec.js",
-          "line": 8,
-          "column": 1
-        },
-        {
-          "title": "orangehrm login",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 6639,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-05T18:51:22.830Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "2a462c98d9f9b1a1f951-5dff62599517c546ef4d",
-          "file": "reporters.spec.js",
-          "line": 13,
-          "column": 1
+          "id": "0d26061efb231c075fb0-3123c98fd0e7c695719f",
+          "file": "pomtest.spec.js",
+          "line": 6,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-05T18:50:59.529Z",
-    "duration": 30070.009000000002,
-    "expected": 3,
+    "startTime": "2026-10-06T18:53:54.109Z",
+    "duration": 46929.654,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
