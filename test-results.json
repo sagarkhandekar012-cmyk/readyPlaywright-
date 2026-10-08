@@ -106,29 +106,36 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30150,
+                  "status": "failed",
+                  "duration": 23166,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\retry.spec.js:23:22",
+                    "location": {
+                      "file": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\retry.spec.js",
+                      "column": 22,
+                      "line": 23
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 21 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m \u001b[36mconst\u001b[39m status\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m view\u001b[33m.\u001b[39mnewPage(\u001b[32m'Turf Information'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
                       "location": {
-                        "file": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\pages\\home.js",
-                        "column": 51,
-                        "line": 18
+                        "file": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\retry.spec.js",
+                        "column": 22,
+                        "line": 23
                       },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('tbody tr').filter({ hasText: 'Rk turf' }).locator('svg.lucide-eye')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpages\\home.js:18\n\n\u001b[0m \u001b[90m 16 |\u001b[39m         \u001b[90m// ३. त्या विशिष्ट रो मधील आयकॉन किंवा स्विचवर क्लिक करणे\u001b[39m\n \u001b[90m 17 |\u001b[39m         \u001b[90m// (तुमच्या गरजेनुसार येथे 'svg.lucide-eye' किंवा 'span.rt-SwitchThumb' वापरा)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m targetRow\u001b[33m.\u001b[39mlocator(\u001b[32m\"svg.lucide-eye\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m         \n \u001b[90m 20 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m`>>> Successfully clicked for Turf: ${turfName} <<<`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     }\u001b[0m\n\u001b[2m    at homePage.turfs (C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\pages\\home.js:18:51)\u001b[22m\n\u001b[2m    at C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\retry.spec.js:16:5\u001b[22m"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 21 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m \u001b[36mconst\u001b[39m status\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m view\u001b[33m.\u001b[39mnewPage(\u001b[32m'Turf Information'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\retry.spec.js:23:22\u001b[22m"
                     }
                   ],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": ">>> Successfully clicked for Turf: Rk turf <<<\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-07T18:33:13.291Z",
+                  "startTime": "2026-10-08T08:20:07.463Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -136,13 +143,18 @@
                       "contentType": "text/markdown",
                       "path": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\test-results\\retry-pom-chromium\\error-context.md"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\retry.spec.js",
+                    "column": 22,
+                    "line": 23
+                  }
                 },
                 {
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 25241,
+                  "duration": 22635,
                   "errors": [],
                   "stdout": [
                     {
@@ -154,7 +166,7 @@
                   ],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-10-07T18:33:45.701Z",
+                  "startTime": "2026-10-08T08:20:32.774Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -172,8 +184,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-07T18:33:12.462Z",
-    "duration": 59602.963,
+    "startTime": "2026-10-08T08:20:06.922Z",
+    "duration": 49672.427,
     "expected": 0,
     "skipped": 0,
     "unexpected": 0,

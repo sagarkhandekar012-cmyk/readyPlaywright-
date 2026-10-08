@@ -1,8 +1,9 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="59.602963">
-<testsuite name="retry.spec.js" timestamp="2026-10-07T18:33:12.549Z" hostname="chromium" tests="1" failures="0" skipped="0" time="55.391" errors="0">
-<testcase name="pom" classname="retry.spec.js" time="55.391">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="49.672427000000006">
+<testsuite name="retry.spec.js" timestamp="2026-10-08T08:20:07.030Z" hostname="chromium" tests="1" failures="0" skipped="0" time="45.801" errors="0">
+<testcase name="pom" classname="retry.spec.js" time="45.801">
 <system-out>
-<![CDATA[
+<![CDATA[>>> Successfully clicked for Turf: Rk turf <<<
+
 [[ATTACHMENT|test-results\retry-pom-chromium\error-context.md]]
 >>> Successfully clicked for Turf: Rk turf <<<
 Sapadlela shabd: Turf Information
