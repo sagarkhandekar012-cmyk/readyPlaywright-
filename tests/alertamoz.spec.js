@@ -38,7 +38,7 @@ else{
 })
 
 test('alert amoz', async({page}) => {
-test.skip();
+//test.skip();
  await page.goto("https://testing.companyadmin-amoz.betadelivery.com/login", );
 //login
     const isEmailInputEnabled = page.locator("//input[@placeholder='Enter Email Id']")

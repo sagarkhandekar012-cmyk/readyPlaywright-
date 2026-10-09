@@ -1,0 +1,9 @@
+total frames 2
+Logo is not visible
+after login frame 2
+Field is visible
+Value is not zero
+there is Total Number Of Booked Orders text is correct
+there is This Week text is correct
+there is This Month text is correct
+there is Subscription

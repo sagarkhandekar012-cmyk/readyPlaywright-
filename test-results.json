@@ -4,11 +4,10 @@
       "C:\\Program Files\\nodejs\\node.exe",
       "C:\\Users\\wdila\\Documents\\readyPlaywright-\\node_modules\\@playwright\\test\\cli.js",
       "test",
-      "tests/retry.spec.js",
+      "tests/alertamoz.spec.js",
       "--project",
       "chromium",
-      "--headed",
-      "--retries=1"
+      "--headed"
     ],
     "configFile": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\playwright.config.js",
     "rootDir": "C:/Users/wdila/Documents/readyPlaywright-/tests",
@@ -29,7 +28,7 @@
       {
         "outputDir": "C:/Users/wdila/Documents/readyPlaywright-/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {
           "actualWorkers": 1
         },
@@ -86,14 +85,14 @@
   },
   "suites": [
     {
-      "title": "retry.spec.js",
-      "file": "retry.spec.js",
+      "title": "alertamoz.spec.js",
+      "file": "alertamoz.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "pom",
-          "ok": true,
+          "title": "login page message box",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -107,88 +106,105 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 23166,
+                  "duration": 3114,
                   "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\retry.spec.js:23:22",
+                    "message": "ReferenceError: loginPageMessage is not defined",
+                    "stack": "ReferenceError: loginPageMessage is not defined\n    at C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\alertamoz.spec.js:22:18",
                     "location": {
-                      "file": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\retry.spec.js",
-                      "column": 22,
-                      "line": 23
+                      "file": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\alertamoz.spec.js",
+                      "column": 18,
+                      "line": 22
                     },
-                    "snippet": "\u001b[0m \u001b[90m 21 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m \u001b[36mconst\u001b[39m status\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m view\u001b[33m.\u001b[39mnewPage(\u001b[32m'Turf Information'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                    "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m     \u001b[90m//const loginPagemessage = await page.getByText('Please fix the highlighted field')\u001b[39m\n \u001b[90m 21 |\u001b[39m \u001b[36mconst\u001b[39m loginPagemessage \u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//section[@aria-label='Notifications Alt+T']\"\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect(loginPageMessage)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m   \u001b[90m/*  if(await loginPagemessage.isVisible()){\u001b[39m\n \u001b[90m 24 |\u001b[39m \u001b[90m    console.log('there is also this message is visible ')\u001b[39m\n \u001b[90m 25 |\u001b[39m \u001b[90m}\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\retry.spec.js",
-                        "column": 22,
-                        "line": 23
+                        "file": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\alertamoz.spec.js",
+                        "column": 18,
+                        "line": 22
                       },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 21 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m \u001b[36mconst\u001b[39m status\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m view\u001b[33m.\u001b[39mnewPage(\u001b[32m'Turf Information'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\retry.spec.js:23:22\u001b[22m"
+                      "message": "ReferenceError: loginPageMessage is not defined\n\n\u001b[0m \u001b[90m 20 |\u001b[39m     \u001b[90m//const loginPagemessage = await page.getByText('Please fix the highlighted field')\u001b[39m\n \u001b[90m 21 |\u001b[39m \u001b[36mconst\u001b[39m loginPagemessage \u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//section[@aria-label='Notifications Alt+T']\"\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect(loginPageMessage)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m   \u001b[90m/*  if(await loginPagemessage.isVisible()){\u001b[39m\n \u001b[90m 24 |\u001b[39m \u001b[90m    console.log('there is also this message is visible ')\u001b[39m\n \u001b[90m 25 |\u001b[39m \u001b[90m}\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\alertamoz.spec.js:22:18\u001b[22m"
                     }
                   ],
-                  "stdout": [
-                    {
-                      "text": ">>> Successfully clicked for Turf: Rk turf <<<\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-08T08:20:07.463Z",
+                  "startTime": "2026-10-09T05:59:36.105Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "error-context",
                       "contentType": "text/markdown",
-                      "path": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\test-results\\retry-pom-chromium\\error-context.md"
+                      "path": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\test-results\\alertamoz-login-page-message-box-chromium\\error-context.md"
                     }
                   ],
                   "errorLocation": {
-                    "file": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\retry.spec.js",
-                    "column": 22,
-                    "line": 23
+                    "file": "C:\\Users\\wdila\\Documents\\readyPlaywright-\\tests\\alertamoz.spec.js",
+                    "column": 18,
+                    "line": 22
                   }
-                },
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f2a6602490dd7c9c907c-55bc94a43b86416e3730",
+          "file": "alertamoz.spec.js",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "alert amoz",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 22635,
+                  "duration": 21735,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": ">>> Successfully clicked for Turf: Rk turf <<<\n"
+                      "text": "message is not visible \n"
                     },
                     {
-                      "text": "Sapadlela shabd: Turf Information\n"
+                      "text": "machig the text exactly \n"
                     }
                   ],
                   "stderr": [],
-                  "retry": 1,
-                  "startTime": "2026-10-08T08:20:32.774Z",
+                  "retry": 0,
+                  "startTime": "2026-10-09T05:59:40.793Z",
                   "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "flaky"
+              "status": "expected"
             }
           ],
-          "id": "ff6b798e5d24db6f0a6b-f6caaa7e68aa30851e4d",
-          "file": "retry.spec.js",
-          "line": 6,
-          "column": 5
+          "id": "f2a6602490dd7c9c907c-41ac795afe4a9faf4f9c",
+          "file": "alertamoz.spec.js",
+          "line": 40,
+          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-08T08:20:06.922Z",
-    "duration": 49672.427,
-    "expected": 0,
+    "startTime": "2026-10-09T05:59:35.631Z",
+    "duration": 27962.95,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 0,
-    "flaky": 1
+    "unexpected": 1,
+    "flaky": 0
   }
 }

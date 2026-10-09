@@ -165,8 +165,8 @@ if (await subscription.isVisible()) {
     
     // MOVE THIS INSIDE THE IF STATEMENT
     // Only check the price if we actually clicked the subscription!
-    await expect(subscriptionPrice).toHaveValue("60.00");
-    if (await subscriptionPrice.inputValue() === "60.00")
+    await expect(subscriptionPrice).toHaveValue("60.000");
+    if (await subscriptionPrice.inputValue() === "60.000")
          {
         console.log('Subscription Price is correct');
     } else {

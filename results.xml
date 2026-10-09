@@ -1,12 +1,33 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="49.672427000000006">
-<testsuite name="retry.spec.js" timestamp="2026-10-08T08:20:07.030Z" hostname="chromium" tests="1" failures="0" skipped="0" time="45.801" errors="0">
-<testcase name="pom" classname="retry.spec.js" time="45.801">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="1" time="27.96295">
+<testsuite name="alertamoz.spec.js" timestamp="2026-10-09T05:59:35.681Z" hostname="chromium" tests="2" failures="0" skipped="0" time="24.849" errors="1">
+<testcase name="login page message box" classname="alertamoz.spec.js" time="3.114">
 <system-out>
-<![CDATA[>>> Successfully clicked for Turf: Rk turf <<<
+<![CDATA[
+[[ATTACHMENT|test-results\alertamoz-login-page-message-box-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="loginPageMessage is not defined" type="ReferenceError">
+<![CDATA[  [chromium] › alertamoz.spec.js:6:1 › login page message box ──────────────────────────────────────
 
-[[ATTACHMENT|test-results\retry-pom-chromium\error-context.md]]
->>> Successfully clicked for Turf: Rk turf <<<
-Sapadlela shabd: Turf Information
+    ReferenceError: loginPageMessage is not defined
+
+      20 |     //const loginPagemessage = await page.getByText('Please fix the highlighted field')
+      21 | const loginPagemessage =await page.locator("//section[@aria-label='Notifications Alt+T']")
+    > 22 |     await expect(loginPageMessage).toBeVisible();
+         |                  ^
+      23 |   /*  if(await loginPagemessage.isVisible()){
+      24 |     console.log('there is also this message is visible ')
+      25 | }
+        at C:\Users\wdila\Documents\readyPlaywright-\tests\alertamoz.spec.js:22:18
+
+    Error Context: ..\test-results\alertamoz-login-page-message-box-chromium\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="alert amoz" classname="alertamoz.spec.js" time="21.735">
+<system-out>
+<![CDATA[message is not visible 
+machig the text exactly 
 ]]>
 </system-out>
 </testcase>
