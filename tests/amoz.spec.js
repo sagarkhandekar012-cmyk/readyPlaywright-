@@ -111,7 +111,10 @@ await buttonAttribute.click();
 //await page.locator("//span[contains(text(),'Select Brand Name')]").click();
 //await page.locator("//div[@class='rt-Flex rt-r-fd-column rt-r-gap-1']//div//div//div//input[@placeholder='Search...']").fill('Adi');
 
+
+    
 // this is for the select option from the dropdown using the value and then check the selected option is selected or not
+    
 const selectBrand = page.locator("//span[contains(text(),'Select Brand Name')]");
 await selectBrand.isEnabled();
 await selectBrand.isVisible();
@@ -182,7 +185,7 @@ if (await durationTime.isVisible()) {
     console.log("there is Duration Time");
 }
     await expect(durationTime).toHaveValue("2 weekly");
-    if (await durationTime.inputValue() === "2 weekly") 
+    if (await durationTime.inputValue() === "2 weekly")
         {
         console.log('Duration Time is correct');
     } else {
