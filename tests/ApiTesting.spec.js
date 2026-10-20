@@ -11,7 +11,7 @@ test('get api data', async ({ request }) => {
     const getResponse = await request.get('https://reqres.in/api/users?page=2');
     console.log(await getResponse.json());
     expect(getResponse.status()).toBe(200);
-})
+});
 
 
 /*post request there we are posting data on the server using api */
