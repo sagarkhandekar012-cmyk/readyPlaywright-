@@ -10,7 +10,7 @@ test.beforeAll(async ({ browser }) => {
 });
 test.afterAll(async()=>{
     console.log('-----END-----')
-})
+});
 
 test.beforeEach(async () => {
     console.log('login');
