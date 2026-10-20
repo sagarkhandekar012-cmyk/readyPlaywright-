@@ -20,4 +20,4 @@ await page.fill("//input[@id='name']","sagar")  // this is also for the input bo
 
 await page.waitForTimeout(5000)
 
-})
+});
