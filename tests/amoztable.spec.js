@@ -40,7 +40,8 @@ test('table', async({page}) => {
     const matchingRow = await rows.filter({
     has: page.locator("td"),
     hasText: "PRD-1115"
-    })
+    });
+    
     // this will click on the eye icon of the matching row
     //await matchingRow.locator('svg.lucide-eye').click();
     
