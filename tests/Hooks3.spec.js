@@ -12,7 +12,7 @@ test.beforeAll(async ({ browser }) => {
     await page.locator("//input[@placeholder='Enter Email Id']").fill('shopby@yopmail.com');
     await page.locator("//input[@placeholder='Enter Password']").fill('Test@123');
     await page.locator("//button[normalize-space()='Login']").click();    
-})
+});
 
 test.afterAll(async () => {
 
