@@ -17,4 +17,4 @@ await expect(await page.locator("(//input[@id='female'])[1]").isChecked()).toBeF
 
 await page.waitForTimeout(5000);
 
-})
+});
