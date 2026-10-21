@@ -69,7 +69,7 @@ await page.locator('//input[@aria-label="Character 3 of 4"]').fill('3');
 await page.locator('//input[@aria-label="Character 4 of 4"]').fill('4'); 
 await page.locator("//button[normalize-space()='Verify']").click();
 
-const text = await page.locator("//span[@class='rt-Text rt-r-size-6']")
+const text = await page.locator("//span[@class='rt-Text rt-r-size-6']");
 await expect(text).toBeVisible();
 
 await page.waitForTimeout(5000);
